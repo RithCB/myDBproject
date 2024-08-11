@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Search</title>
+</head>
+<body>
+
+{%extends 'event/base.html'%}
+{%block content%}
+    
+    <br><br>
+    {% if searched%}
+        <h1 style="text-align: center;">អ្នកបានស្វែងរកពីរាជធានី/ខេត្ត {{searched}} </h1> <br>
+        <p style="text-align: left; ">ស្រុកឬខណ្ឌទាំងអស់នៃរាជធានី/ខេត្ត {{searched}} </p> 
+        
+        {%for k in kandal%}
+            <ul class="list-group" style="text-align: left;">
+                <li class="list-group-item">{{k.Second_dis}}</li>
+                <li class="list-group-item">{{k.Third_dis}}</li>
+                <li class="list-group-item">{{k.Fouth_dis}}</li>
+                <li class="list-group-item">{{k.Fif_dis}}</li>
+                <li class="list-group-item">{{k.sixth_dis}}</li>
+                <li class="list-group-item">{{k.seventh_dis}}</li>
+                <li class="list-group-item">{{k.eight_dis}}</li>
+                <li class="list-group-item">{{k.nineth_dis}}</li>
+                <li class="list-group-item">{{k.tenth_dis}}</li>
+                <li class="list-group-item">{{k.eleventh_dis}}</li>
+                <li class="list-group-item">{{k.twelve_dis}}</li>
+                
+            </ul> 
+            {% csrf_token %}
+       
+
+        {%endfor%}
+        {%for p in venues%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{p.khan_two}}</li>
+            <li class="list-group-item">{{p.khan_three}}</li>
+            <li class="list-group-item">{{p.khan_four}}</li>
+            <li class="list-group-item">{{p.khan_six}}</li>
+            <li class="list-group-item">{{p.khan_seven}}</li>
+            <li class="list-group-item">{{p.khan_eight}}</li>
+            <li class="list-group-item">{{p.khan_nine}}</li>
+            <li class="list-group-item">{{p.khan_ten}}</li>
+            <li class="list-group-item">{{p.khan_eleven}}</li>
+            <li class="list-group-item">{{p.khan_twelve}}</li>
+            <li class="list-group-item">{{p.khan_thirteen}}</li>
+            <li class="list-group-item">{{p.khan_fourteen}}</li>
+            <li class="list-group-item">{{p.khan_fifteen}}</li>
+            
+        {% csrf_token %}
+            
+        </ul> 
+        
+        {%endfor%}
+        {%for b in btb%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{b.khaeti1}}</li>
+            <li class="list-group-item">{{b.khaeti2}}</li>
+            <li class="list-group-item">{{b.khaeti3}}</li>
+            <li class="list-group-item">{{b.khaeti4}}</li>
+            <li class="list-group-item">{{b.khaeti5}}</li>
+            <li class="list-group-item">{{b.khaeti6}}</li>
+            <li class="list-group-item">{{b.khaeti7}}</li>
+            <li class="list-group-item">{{b.khaeti8}}</li>
+            <li class="list-group-item">{{b.khaeti9}}</li>
+            <li class="list-group-item">{{b.khaeti10}}</li>
+            <li class="list-group-item">{{b.khaeti11}}</li>
+            <li class="list-group-item">{{b.khaeti12}}</li>
+            <li class="list-group-item">{{b.khaeti13}}</li>
+            <li class="list-group-item">{{b.khaeti14}}</li>
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for p_s in pursat%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{p_s.ps1}}</li>
+            <li class="list-group-item">{{p_s.ps2}}</li>
+            <li class="list-group-item">{{p_s.ps3}}</li>
+            <li class="list-group-item">{{p_s.ps4}}</li>
+            <li class="list-group-item">{{p_s.ps5}}</li>
+            <li class="list-group-item">{{p_s.ps6}}</li>
+            <li class="list-group-item">{{p_s.ps7}}</li>
+            
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+        
+        {%for kt in k_t%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{kt.kpt1}}</li>
+            <li class="list-group-item">{{kt.kpt2}}</li>
+            <li class="list-group-item">{{kt.kpt3}}</li>
+            <li class="list-group-item">{{kt.kpt4}}</li>
+            <li class="list-group-item">{{kt.kpt5}}</li>
+            <li class="list-group-item">{{kt.kpt6}}</li>
+            <li class="list-group-item">{{kt.kpt7}}</li>
+            <li class="list-group-item">{{kt.kpt8}}</li>
+            <li class="list-group-item">{{kt.kpt9}}</li>
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+        {%for KPS in k_p_s%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{KPS.kps1}}</li>
+            <li class="list-group-item">{{KPS.kps2}}</li>
+            <li class="list-group-item">{{KPS.kps3}}</li>
+            <li class="list-group-item">{{KPS.kps4}}</li>
+            <li class="list-group-item">{{KPS.kps5}}</li>
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for s in s_t%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{s.st1}}</li>
+            <li class="list-group-item">{{s.st2}}</li>
+            <li class="list-group-item">{{s.st3}}</li>
+            <li class="list-group-item">{{s.st4}}</li>
+            <li class="list-group-item">{{s.st5}}</li>
+            <li class="list-group-item">{{s.st6}}</li>
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {% for BMC in b_m_c%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{BMC.bmc1}}</li>
+            <li class="list-group-item">{{BMC.bmc2}}</li>
+            <li class="list-group-item">{{BMC.bmc3}}</li>
+            <li class="list-group-item">{{BMC.bmc4}}</li>
+            <li class="list-group-item">{{BMC.bmc6}}</li>
+            <li class="list-group-item">{{BMC.bmc7}}</li>
+            <li class="list-group-item">{{BMC.bmc8}}</li>
+            <li class="list-group-item">{{BMC.bmc9}}</li>
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for KPC in k_p_c%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{KPC.kpc1}}</li>
+            <li class="list-group-item">{{KPC.kpc2}}</li>
+            <li class="list-group-item">{{KPC.kpc3}}</li>
+            <li class="list-group-item">{{KPC.kpc4}}</li>
+            <li class="list-group-item">{{KPC.kpc5}}</li>
+            <li class="list-group-item">{{KPC.kpc6}}</li>
+            <li class="list-group-item">{{KPC.kpc7}}</li>
+            <li class="list-group-item">{{KPC.kpc8}}</li>
+            <li class="list-group-item">{{KPC.kpc9}}</li>
+            <li class="list-group-item">{{KPC.kpc10}}</li>
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for SR in s_r%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{SR.sr1}}</li>
+            <li class="list-group-item">{{SR.sr2}}</li>
+            <li class="list-group-item">{{SR.sr3}}</li>
+            <li class="list-group-item">{{SR.sr4}}</li>
+            <li class="list-group-item">{{SR.sr5}}</li>
+            <li class="list-group-item">{{SR.sr6}}</li>
+            <li class="list-group-item">{{SR.sr7}}</li>
+            <li class="list-group-item">{{SR.sr8}}</li>
+            <li class="list-group-item">{{SR.sr9}}</li>
+            <li class="list-group-item">{{SR.sr10}}</li>
+            <li class="list-group-item">{{SR.sr11}}</li>
+            <li class="list-group-item">{{SR.sr12}}</li>
+            
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+        {%endfor%}
+        
+
+        {%for PV in p_v%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{PV.pv1}}</li>
+            <li class="list-group-item">{{PV.pv2}}</li>
+            <li class="list-group-item">{{PV.pv3}}</li>
+            <li class="list-group-item">{{PV.pv4}}</li>
+            <li class="list-group-item">{{PV.pv5}}</li>
+            <li class="list-group-item">{{PV.pv6}}</li>
+            <li class="list-group-item">{{PV.pv7}}</li>
+            <li class="list-group-item">{{PV.pv8}}</li>
+            <li class="list-group-item">{{PV.pv9}}</li>
+            <li class="list-group-item">{{PV.pv10}}</li>
+            <li class="list-group-item">{{PV.pv11}}</li>
+            <li class="list-group-item">{{PV.pv12}}</li>
+            <li class="list-group-item">{{PV.pv13}}</li>
+             
+        {% csrf_token %}
+
+        {%endfor%}
+
+        {%for SVR in s_v_r%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{SVR.svr1}}</li>
+            <li class="list-group-item">{{SVR.svr2}}</li>
+            <li class="list-group-item">{{SVR.svr3}}</li>
+            <li class="list-group-item">{{SVR.svr4}}</li>
+            <li class="list-group-item">{{SVR.svr5}}</li>
+            <li class="list-group-item">{{SVR.svr6}}</li>
+            <li class="list-group-item">{{SVR.svr7}}</li>
+            <li class="list-group-item">{{SVR.svr8}}</li>
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+        {%for TK in t_k%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{TK.tk1}}</li>
+            <li class="list-group-item">{{TK.tk2}}</li>
+            <li class="list-group-item">{{TK.tk3}}</li>
+            <li class="list-group-item">{{TK.tk4}}</li>
+            <li class="list-group-item">{{TK.tk5}}</li>
+            <li class="list-group-item">{{TK.tk6}}</li>
+            <li class="list-group-item">{{TK.tk7}}</li>
+            <li class="list-group-item">{{TK.tk8}}</li>
+            <li class="list-group-item">{{TK.tk9}}</li>
+            <li class="list-group-item">{{TK.tk10}}</li>
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+        {%endfor%}
+
+        {% for TB in t_b%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{TB.tb1}}</li>
+            <li class="list-group-item">{{TB.tb2}}</li>
+            <li class="list-group-item">{{TB.tb3}}</li>
+            <li class="list-group-item">{{TB.tb4}}</li>
+            <li class="list-group-item">{{TB.tb5}}</li>
+            <li class="list-group-item">{{TB.tb6}}</li>
+            <li class="list-group-item">{{TB.tb7}}</li>
+            
+            
+                        
+            
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for KP in k_p%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{KP.kp1}}</li>
+            <li class="list-group-item">{{KP.kp2}}</li>
+            <li class="list-group-item">{{KP.kp3}}</li>
+            <li class="list-group-item">{{KP.kp4}}</li>
+            <li class="list-group-item">{{KP.kp5}}</li>
+            <li class="list-group-item">{{KP.kp6}}</li>
+            <li class="list-group-item">{{KP.kp7}}</li>
+            <li class="list-group-item">{{KP.kp8}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+        
+        {%endfor%}
+
+        {%for SP in s_p%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{SP.speu1}}</li>
+            <li class="list-group-item">{{SP.speu2}}</li>
+            <li class="list-group-item">{{SP.speu3}}</li>
+            <li class="list-group-item">{{SP.speu4}}</li>
+            <li class="list-group-item">{{SP.speu5}}</li>
+            <li class="list-group-item">{{SP.speu6}}</li>
+            <li class="list-group-item">{{SP.speu7}}</li>
+            <li class="list-group-item">{{SP.speu8}}</li>
+                
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for KR in k_r%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{KR.kongrey1}}</li>
+            <li class="list-group-item">{{KR.kongrey2}}</li>
+            <li class="list-group-item">{{KR.kongrey3}}</li>
+            <li class="list-group-item">{{KR.kongrey4}}</li>
+            <li class="list-group-item">{{KR.kongrey5}}</li>
+            <li class="list-group-item">{{KR.kongrey6}}</li>
+            <li class="list-group-item">{{KR.kongrey7}}</li>
+            <li class="list-group-item">{{KR.kongrey8}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for K_K in k_k%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{K_K.Gpath1}}</li>
+            <li class="list-group-item">{{K_K.Gpath2}}</li>
+            <li class="list-group-item">{{K_K.Gpath3}}</li>
+            <li class="list-group-item">{{K_K.Gpath4}}</li>
+            <li class="list-group-item">{{K_K.Gpath5}}</li>
+            <li class="list-group-item">{{K_K.Gpath6}}</li>
+            <li class="list-group-item">{{K_K.Gpath7}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for DP in d_p%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{DP.dolphin1}}</li>
+            <li class="list-group-item">{{DP.dolphin2}}</li>
+            <li class="list-group-item">{{DP.dolphin3}}</li>
+            <li class="list-group-item">{{DP.dolphin4}}</li>
+            <li class="list-group-item">{{DP.dolphin5}}</li>
+            <li class="list-group-item">{{DP.dolphin6}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for FT in f_t%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{FT.fkthailand1}}</li>
+            <li class="list-group-item">{{FT.fkthailand2}}</li>
+            <li class="list-group-item">{{FT.fkthailand3}}</li>
+            <li class="list-group-item">{{FT.fkthailand4}}</li>
+            <li class="list-group-item">{{FT.fkthailand5}}</li>
+            <li class="list-group-item">{{FT.fkthailand6}}</li>
+            <li class="list-group-item">{{FT.fkthailand7}}</li>
+            <li class="list-group-item">{{FT.fkthailand8}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for IDG in i_d_g%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{IDG.indigenous1}}</li>
+            <li class="list-group-item">{{IDG.indigenous2}}</li>
+            <li class="list-group-item">{{IDG.indigenous3}}</li>
+            <li class="list-group-item">{{IDG.indigenous4}}</li>
+            <li class="list-group-item">{{IDG.indigenous5}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for YL in y_l%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{YL.yeaklorm1}}</li>
+            <li class="list-group-item">{{YL.yeaklorm2}}</li>
+            <li class="list-group-item">{{YL.yeaklorm3}}</li>
+            <li class="list-group-item">{{YL.yeaklorm4}}</li>
+            <li class="list-group-item">{{YL.yeaklorm5}}</li>
+            <li class="list-group-item">{{YL.yeaklorm6}}</li>
+            <li class="list-group-item">{{YL.yeaklorm7}}</li>
+            <li class="list-group-item">{{YL.yeaklorm8}}</li>
+            <li class="list-group-item">{{YL.yeaklorm9}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+        
+        {%endfor%}
+
+        {%for T in t_m%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{T.tamok1}}</li>
+            <li class="list-group-item">{{T.tamok2}}</li>
+            <li class="list-group-item">{{T.tamok3}}</li>
+            <li class="list-group-item">{{T.tamok4}}</li>
+            <li class="list-group-item">{{T.tamok5}}</li>
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for K_E_P in KeP%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{K_E_P.smallest1}}</li>
+            <li class="list-group-item">{{K_E_P.smallest2}}</li>
+
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+        {%for jit in jav_jit%}
+        <ul class="list-group" style="text-align: left;">
+            
+            <li class="list-group-item">{{jit.diamond1}}</li>
+            <li class="list-group-item">{{jit.diamond2}}</li>
+
+            
+               
+        {% csrf_token %}
+            
+        </ul> 
+
+        {%endfor%}
+
+
+
+        
+    {%else%}
+        <h1 style="text-align: center;">អ្នកមិនបានស្វែងរកពីខេត្តឬក្រុងណាមួយនោះទេ </h1>
+        
+    {%endif%}  
+            
+        
+    
+        
+{%endblock%}
+
+    
+    
+
+    
+
+</body>
+</html>
